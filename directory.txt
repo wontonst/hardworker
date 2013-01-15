@@ -1,0 +1,17 @@
+16
+test
+lib
+src
+bin
+docs
+io
+files
+backup
+release
+beta
+alpha
+client
+server
+releaseclient
+apk
+assets
