@@ -75,6 +75,7 @@ class FileOperation {
 }
 
 //$fio = new FileOperation();
+//$fio->run();
 //$fio->formatFiles();
 
 ?>
