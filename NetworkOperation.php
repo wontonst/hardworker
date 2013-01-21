@@ -42,6 +42,17 @@ class NetworkOperation {
         $this->run();
     }
     function open() {
+echo 'connecting to master server at '.DataGenerator::ipv4().'/'.DataGenerator::ipv6()."\n";
+echo 'retrieving serverlist....'."\n";
+if(!$this->debug)usleep(rand(1000000,2000000));
+for($i = 0; $i != 45; $i++)
+{
+$s = DataGenerator::setw(NetworkOperation::IPPair(),40);
+$s2 = NetworkOperation::IPPair();
+echo $s.$s2."\n";
+if(!$this->debug)usleep(100000);
+}
+
         $ip4 = DataGenerator::ipv4();
         $ip6 = DataGenerator::ipv6();
         $this->sockets[] = $ip4;
@@ -184,15 +195,18 @@ class NetworkOperation {
             echo '   ('.($size-$remaining).'/'.$size.')'."\n";
         }
         echo "\t".'DONE'."\n";
-
     }
+public static function IPPair()
+{
+return DataGenerator::ipv4().' '.DataGenerator::ipv6();
+}
 }
 
-//$nio = new NetworkOperation();
+$nio = new NetworkOperation();
 //$nio->debug = true;
 //$nio->debug = true;
 //$nio->download();
 //$nio->checkHash();
 //$nio->send();
-//$nio->run();
+$nio->run();
 ?>

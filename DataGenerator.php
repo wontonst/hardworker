@@ -204,6 +204,12 @@ class DataGenerator {
     public static function capitalLetter() {
         return chr(rand(65,90));
     }
+
+public static function setw($string,$size)
+{
+while(strlen($string) < $size)$string.=' ';
+return $string;
+}
 }
 
 
