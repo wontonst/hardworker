@@ -1,6 +1,6 @@
 <?
 
-$files = array('urls.txt','usrnames.txt','programs.txt','directory.txt','source.txt','package.txt');
+$files = array('urls.txt','usrnames.txt','programs.txt','directory.txt','source.txt','package.txt','get.txt');
 
 foreach($files as $filename) {
     $file = fopen($filename,'r');

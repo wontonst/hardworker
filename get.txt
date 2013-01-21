@@ -1,0 +1,9 @@
+0
+usr
+id
+session
+sessionid
+wc3
+aperture
+loc
+

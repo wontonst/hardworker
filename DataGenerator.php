@@ -179,6 +179,16 @@ class DataGenerator {
         }
         return $file;
     }
+public static function urlLong()
+{
+$url = DataGenerator::url().'?'.DataGrabber::grab('get.txt').'='.DataGenerator::randomString();
+$r = rand(0,4);
+for($i = 0; $i != $r; $i++)
+{
+$url .= '&'.DataGrabber::grab('get.txt').'='.DataGenerator::randomString();;
+}
+return $url;
+}
     public static function directoryPath() {
         $path ='';
         switch(rand(0,2)) {
@@ -211,8 +221,8 @@ while(strlen($string) < $size)$string.=' ';
 return $string;
 }
 }
-
-
+//echo DataGenerator::url();
+echo DataGenerator::urlLong();
 /*
 for($i = 0; $i != 10; $i++)
 {
