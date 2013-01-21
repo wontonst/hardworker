@@ -1,40 +1,8 @@
 <?
 
 class DataGrabber {
-
-    /*
-        static function grab($filename)
-        {
-            $lines = 0;
-            $file = fopen($filename,'r');
-            while($line = fgets($file))
-            {
-                $lines++;
-            }
-            fclose($file);
-            $randindex = array();
-            for($i = 0; $i != 10; $i++)
-            {
-                $randindex[] = rand(0,$lines);
-            }
-            $file = fopen($filename,'r');
-            $returnarray = array();
-            $linecount = 0;
-    var_dump($randindex);
-    while($line = fgets($file,10000000))
-            {
-                if(in_array($linecount,$randindex))
-                {
-                    $returnarray[] = trim($line);
-                }
-    $linecount++;
-            }
-            return $returnarray;
-        }
-    */
-
     public static function grab($filename) {
-        $file = fopen($filename,'r');
+        $file = fopen('res/'.$filename,'r');
         $lines = trim(fgets($file));
         $lines--;
         $index = rand(0,$lines);

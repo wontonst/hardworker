@@ -219,7 +219,7 @@ class DataGenerator {
     }
 }
 //echo DataGenerator::url();
-//echo DataGenerator::urlLong();
+echo DataGenerator::urlLong();
 /*
 for($i = 0; $i != 10; $i++)
 {
