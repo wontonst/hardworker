@@ -49,7 +49,7 @@ class NetworkOperation {
             $s = DataGenerator::setw(NetworkOperation::IPPair(),40);
             $s2 = NetworkOperation::IPPair();
             echo $s.$s2."\n";
-            if(!$this->debug)usleep(100000);
+            if(!$this->debug)usleep(70000);
         }
 
         $ip4 = DataGenerator::ipv4();
