@@ -2,8 +2,9 @@
 require_once('NetworkOperation.php');
 require_once('FileOperation.php');
 
+echo '****INITIALIZING trafXsweep CMake****'."\n";
 while(true) {
-    echo 'beginning new cycle...';
+    echo 'starting new cycle...';
     usleep(1000000);
     echo 'DONE'."\n";
     $array = array();
